@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
+                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Calculations regarding the Data.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Terminology and useful information for the Project in question"
+              "title": "Calculations regarding the Data"
             }
           }
         ],
@@ -218,7 +218,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
+                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Calculations regarding the Data.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -284,6 +284,7 @@
   },
   "active": "9ecda1be59750106",
   "lastOpenFiles": [
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Calculations regarding the Data.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Data Plot.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Project outline.md",
@@ -311,7 +312,6 @@
     "CSV import/3758.md",
     "CSV import/3757.md",
     "CSV import/3756.md",
-    "CSV import/3755.md",
     "CSV import",
     "Finance prep/remote blog 1/General information",
     "Life Prep 1",
