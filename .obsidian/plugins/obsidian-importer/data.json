@@ -1,0 +1,22 @@
+{
+  "secrets": {},
+  "outputLocations": {},
+  "outputSettings": {
+    "csv": {
+      "folder": "CSV import",
+      "attachments": {
+        "mode": "vault",
+        "path": ""
+      },
+      "duplicates": "update",
+      "saveSourceId": true,
+      "template": "",
+      "titleTemplate": "{{title}}"
+    }
+  },
+  "onenoteAttachments": {},
+  "sourceFolders": {
+    "csv": "C:\\Users\\vilja\\Quant BDC"
+  },
+  "lastSourceFolder": "C:\\Users\\vilja\\Quant BDC"
+}
