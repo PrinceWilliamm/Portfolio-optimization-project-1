@@ -1,5 +1,5 @@
 ## What are the aims of the project
-Aims are to create a comprhensive analysis on the optimized portfolio the contributor V is going ot create
+Aims are to create a comprehensive analysis on the optimized portfolio the contributor W is going ot create
 	The ultimate goal is to have an impact and LinkedIn Larp at the end of this project (if succesful)
 Project goals include building a dynamic portfolio optimization model using historical data across different asset classes, backtest the info and gather rather important data for further studies/careers
 	Equities, Fixed Income, Commodities, Real Estate
