@@ -2,6 +2,12 @@
 #### Expected return
 The profit or loss that an investor anticipates in an investment that has known historical rates of return (RoR)
 	Furthermore, the expected return is like a long-term average of past returns.
+Mathemaical representation$$\bar{r}_a = r_f + \beta_a(r_m - r_f)$$
+Where;
+- $\bar{r}_a = \text{expected return}$
+- $r_f = \text{the risk-free rate of return}$
+- $\beta_a = \text{the investment's beta}$
+- $r_m = \text{the expected market return}$
 #### Variance ($\sigma^2$) in an portfolio
 A measure of volatility of an investment portfolio
 	_It evaluates risk reflected by fluctuations in the combined actual returns of securities within a portfolio_
