@@ -1,0 +1,266 @@
+{
+  "main": {
+    "id": "5e621b83fb4cc1fd",
+    "type": "split",
+    "children": [
+      {
+        "id": "6631e69e7a9fb41a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "24e08d8379b564ab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Finance prep/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Terminology and useful information for the Project in question"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "444530285723cd7b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8e5a5e947578b43",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1f6ca8a78bb191fb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7b4ca58d5df7dc7f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "069a5c2761440ded",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "56032eaf82307a7e",
+    "type": "split",
+    "children": [
+      {
+        "id": "3a1ec8f0b978e553",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a2b4772d127c5f07",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Startti.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Startti"
+            }
+          },
+          {
+            "id": "9d3c42706bf0b68e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "eebe8bd017b6a4aa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "991371f4c0eecb80",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "500abf75d242d540",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Finance prep/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "19f665d42b2e67cc",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {
+                "tabWorkspace": {
+                  "version": 1,
+                  "openTabs": [
+                    {
+                      "tabId": "tab-1790002654022-m9xzg59",
+                      "conversationId": null,
+                      "draftModel": "opus"
+                    }
+                  ],
+                  "activeTabId": "tab-1790002654022-m9xzg59"
+                }
+              },
+              "icon": "lucide-ghost",
+              "title": "claudian-view"
+            }
+          },
+          {
+            "id": "c8c7cf27c953ec46",
+            "type": "leaf",
+            "state": {
+              "type": "system3-sync-status",
+              "state": {},
+              "icon": "satellite",
+              "title": "Sync status"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "system3-relay:Relay": false,
+      "realclaudian:Open Claudian": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "24e08d8379b564ab",
+  "lastOpenFiles": [
+    "Finance prep/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Untitled.md",
+    "Finance prep/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
+    "Finance prep/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Project outline.md",
+    "Finance prep/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/remote blog/README.md",
+    "Danielin Evil Väsäys/Initial.canvas",
+    "remote blog",
+    "Finance prep/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/remote blog",
+    "Math GP/Complex Väsäys/Complex variables and applications.md",
+    "Math GP/Linear Algebra/Third matrix session (stochastic matrices) 1.md",
+    "Math GP/Linear Algebra/Second matrix session.md",
+    "Math GP/Linear Algebra/Neural networks and linear algebra.md",
+    "Math GP/Linear Algebra/First matrix session.md",
+    "Miscellaneous School Stuff/First exam week/Literacy first exam week prep.md",
+    "Danielin Evil Väsäys/02 Roadmap.md",
+    "Danielin Evil Väsäys/03 Task Board.md",
+    "Danielin Evil Väsäys/01 Research Question.md",
+    "Danielin Evil Väsäys/00 Project Overview.md",
+    "Danielin Evil Väsäys/Dashboard.md",
+    "Danielin Evil Väsäys/pendulum_group_project_brief.md",
+    "Danielin Evil Väsäys/Väsäys/Differential Eq..md",
+    "Danielin Evil Väsäys/Väsäys/Complex analysis.md",
+    "Danielin Evil Väsäys/Väsäys/Complex analysis2.md",
+    "Danielin Evil Väsäys/Contributors/Contributor Bibu.md",
+    "Danielin Evil Väsäys/Contributors/Additional Contributors.md",
+    "Danielin Evil Väsäys/Contributors/Contributor Dee.md",
+    "Danielin Evil Väsäys/010 Resources/Mechanics of a pendulum.md",
+    "Danielin Evil Väsäys/09 Presentation/Presentation Outline.md",
+    "Danielin Evil Väsäys/08 Final Report/Final Report.md",
+    "Finance prep/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model",
+    "Trading Journey/START HERE/MA Crossover Backtester in streamit.pdf",
+    "Trading Journey/START HERE/Gemini chat.pdf",
+    "Miscellaneous School Stuff/First exam week",
+    "Trading Journey/START HERE",
+    "Trading Journey/Terminology",
+    "Trading Journey/Backtests",
+    "Math GP/Complex Väsäys"
+  ]
+}

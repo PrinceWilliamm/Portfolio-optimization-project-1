@@ -1,0 +1,173 @@
+{
+  "release": {
+    "channel": "stable"
+  },
+  "sharedFolders": [
+    {
+      "path": "Väsäys GP",
+      "guid": "4eb25123-48c5-4c27-a8ed-90c2ab0cf2ba",
+      "relay": "e71f7f29-aeb5-41f3-a52b-93166c96b98b",
+      "sync": {
+        "images": true,
+        "audio": true,
+        "videos": true,
+        "pdfs": true,
+        "otherTypes": true
+      }
+    },
+    {
+      "path": "Danielin Evil Väsäys",
+      "guid": "93506257-e242-4377-b5ed-1724b49e80fb",
+      "relay": "e71f7f29-aeb5-41f3-a52b-93166c96b98b",
+      "sync": {
+        "images": true,
+        "audio": true,
+        "videos": true,
+        "pdfs": true,
+        "otherTypes": true
+      },
+      "connect": true,
+      "remoteActivity": [
+        {
+          "guid": "dca6cf27-f7ef-4e27-9edf-9122919ea9b5",
+          "timestamp": 1790002518099
+        },
+        {
+          "guid": "1412d7e2-9ae3-42af-a398-c40f37c13d36",
+          "timestamp": 1790002512755
+        },
+        {
+          "guid": "9be39e45-9135-4fdc-b745-05def41dd569",
+          "timestamp": 1790002510475
+        },
+        {
+          "guid": "821ae4f0-e3fb-47ad-b0ed-586896034a20",
+          "timestamp": 1790002485678
+        },
+        {
+          "guid": "68bf1330-5907-436c-a20c-d0028044cb92",
+          "timestamp": 1790002380929
+        },
+        {
+          "guid": "227e943c-3ea5-4264-8822-b2bf4db06f4c",
+          "timestamp": 1790002376889
+        },
+        {
+          "guid": "e9d1b4ce-a7db-4011-bdb6-60d17490e48c",
+          "timestamp": 1790002372921
+        },
+        {
+          "guid": "0f970665-0f75-4566-9c20-48f6b8bb15f0",
+          "timestamp": 1790002364250
+        },
+        {
+          "guid": "b822067e-b2e2-4daf-8b26-fd73c91353c8",
+          "timestamp": 1790002357719
+        },
+        {
+          "guid": "1974ed82-6c2e-404d-88bf-0968d235927f",
+          "timestamp": 1790002352287
+        },
+        {
+          "guid": "06f8e9b8-5dd4-4bec-843c-fc28e8f9d3e3",
+          "timestamp": 1790002348029
+        },
+        {
+          "guid": "6892d9ee-e620-4d35-9708-c08fefe1ef27",
+          "timestamp": 1790002340349
+        },
+        {
+          "guid": "35b63782-2e28-4949-8df4-59768e896f18",
+          "timestamp": 1790002336378
+        },
+        {
+          "guid": "693fd313-7ea5-44e9-bba0-394630c74821",
+          "timestamp": 1790002308647
+        },
+        {
+          "guid": "4a91a0ee-1363-416b-9171-576e5859e95b",
+          "timestamp": 1790002302777
+        },
+        {
+          "guid": "d03b652b-7a7b-4aab-86ae-bea8e4392efc",
+          "timestamp": 1790002294600
+        },
+        {
+          "guid": "e66cbd90-2a4d-41fc-ba30-e1c511d31a59",
+          "timestamp": 1790002203659
+        },
+        {
+          "guid": "dcb11500-7d4e-4663-9f20-7d0e71ec0dd1",
+          "timestamp": 1790002192872
+        },
+        {
+          "guid": "c22197ec-241d-48f2-b6fd-738a972fa5b8",
+          "timestamp": 1789669453901
+        },
+        {
+          "guid": "00928aad-9fa3-43c7-82e1-c55497794d46",
+          "timestamp": 1789660380262
+        },
+        {
+          "guid": "4d38b271-a3f4-49e1-9fe9-d6409f646f0f",
+          "timestamp": 1789564588026
+        }
+      ]
+    },
+    {
+      "path": "Trading Journey",
+      "guid": "d384b74c-dec4-464d-89b8-6490f2809916",
+      "relay": "b287701c-c1c4-4fdd-803a-4b694bc99456",
+      "sync": {
+        "images": true,
+        "audio": true,
+        "videos": true,
+        "pdfs": true,
+        "otherTypes": false
+      },
+      "connect": true,
+      "remoteActivity": []
+    }
+  ],
+  "endpoints": {},
+  "enableDocumentStatus": false,
+  "enableNewLinkFormat": false,
+  "enableDiffLinkStatus": false,
+  "enableDiscordLogin": false,
+  "enableDeviceManagement": true,
+  "enableResourceMeter": false,
+  "enableDeltaLogging": false,
+  "enableNetworkLogging": false,
+  "enableVerifyUploads": false,
+  "enableHSMRecording": false,
+  "enableHSMResourceContracts": false,
+  "enableDraftMode": false,
+  "enableFolderIdbMigration": false,
+  "enableMetadataHealthNotice": true,
+  "enableNoteStateInspector": false,
+  "enableSavingFlagPolyfill": true,
+  "enableFrontmatterDuplicateRecovery": false,
+  "enableSingleUserHistory": true,
+  "enableStreamerMode": false,
+  "debugging": false,
+  "enableDocumentHistory": false,
+  "enableEditorTweens": false,
+  "enableCanvasSync": false,
+  "enableAutomaticDiffResolution": true,
+  "enableSelfManageHosts": true,
+  "enableToasts": true,
+  "enablePresenceAvatars": true,
+  "enableLiveEmbeds": true,
+  "enablePreviewViewHooks": true,
+  "enableMetadataViewHooks": true,
+  "enableKanbanView": true,
+  "login": {
+    "provider": "google"
+  },
+  "enableSyncMenu": true,
+  "enableAttachmentSync": true,
+  "enableDocumentServer": true,
+  "enableMicrosoftLogin": true,
+  "enableGitHubLogin": true,
+  "enableOIDCLogin": true
+}
