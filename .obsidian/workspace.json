@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Data.md",
+                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Project outline.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data"
+              "title": "Project outline"
             }
           }
         ],
@@ -190,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Data.md",
+                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Project outline.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -222,7 +222,7 @@
             }
           },
           {
-            "id": "13ab6afe42175a11",
+            "id": "4b8ed0e87653e537",
             "type": "leaf",
             "state": {
               "type": "system3-sync-status",
@@ -256,32 +256,32 @@
   },
   "active": "8a8b71d164d2f056",
   "lastOpenFiles": [
-    "CSV import/2022-01-25.md",
-    "CSV import/2022-01-24.md",
-    "CSV import/2022-01-21.md",
-    "CSV import/2022-01-20.md",
-    "CSV import/2022-01-19.md",
-    "CSV import/2022-01-18.md",
-    "CSV import/2022-01-14.md",
-    "CSV import/2022-01-13.md",
-    "CSV import/2022-01-12.md",
-    "CSV import/2022-01-11.md",
-    "CSV import/2022-01-10.md",
-    "CSV import/2022-01-07.md",
-    "CSV import/2022-01-06.md",
-    "CSV import/2022-01-05.md",
-    "CSV import/2022-01-04.md",
-    "CSV import/2022-01-03.md",
-    "CSV import/2021-12-31.md",
-    "CSV import/2021-12-30.md",
-    "CSV import/2021-12-29.md",
-    "CSV import/2021-12-28.md",
-    "CSV import/2021-12-27.md",
-    "CSV import/2021-12-23.md",
-    "CSV import/2021-12-22.md",
-    "CSV import/2021-12-21.md",
-    "CSV import/2021-12-20.md",
-    "CSV import/2021-12-17.md",
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Data.md",
+    "CSV import.base",
+    "CSV import/Untitled.md",
+    "CSV import/3774.md",
+    "CSV import/3773.md",
+    "CSV import/3772.md",
+    "CSV import/3771.md",
+    "CSV import/3770.md",
+    "CSV import/3769.md",
+    "CSV import/3768.md",
+    "CSV import/3767.md",
+    "CSV import/3766.md",
+    "CSV import/3765.md",
+    "CSV import/3764.md",
+    "CSV import/3763.md",
+    "CSV import/3762.md",
+    "CSV import/3761.md",
+    "CSV import/3760.md",
+    "CSV import/3759.md",
+    "CSV import/3758.md",
+    "CSV import/3757.md",
+    "CSV import/3756.md",
+    "CSV import/3755.md",
+    "CSV import/3754.md",
+    "CSV import/3753.md",
+    "CSV import/3752.md",
     "CSV import",
     "Finance prep/remote blog 1/General information",
     "Life Prep 1",
@@ -291,7 +291,6 @@
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model",
     "Trading Journey/START HERE/MA Crossover Backtester in streamit.pdf",
     "Trading Journey/START HERE/Gemini chat.pdf",
-    "Miscellaneous School Stuff/First exam week",
-    "Trading Journey/START HERE"
+    "Miscellaneous School Stuff/First exam week"
   ]
 }
