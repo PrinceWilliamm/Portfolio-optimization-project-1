@@ -1,0 +1,1 @@
+In order to calauclate the expected return of the desired assets inside one portoflio, we need to eamnie wh tare the other parameters inside the equation needed. $$\bar{r}_a = r_f + \beta_a(r_m - r_f)$$

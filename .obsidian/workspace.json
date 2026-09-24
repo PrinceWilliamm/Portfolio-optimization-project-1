@@ -8,77 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "24e08d8379b564ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Finance prep/remote blog 1/README.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "README"
-            }
-          },
-          {
-            "id": "75dbca1e83450dd0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Ideal Model Description.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ideal Model Description"
-            }
-          },
-          {
-            "id": "8a8b71d164d2f056",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Ideal Model Description.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ideal Model Description"
-            }
-          },
-          {
-            "id": "843786aea10dbb21",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Data Plot.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Data Plot"
-            }
-          },
-          {
             "id": "9ecda1be59750106",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Calculations regarding the Data.md",
+                "file": "CSV import/2011-04-11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Calculations regarding the Data"
+              "title": "2011-04-11"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -218,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Calculations regarding the Data.md",
+                "file": "CSV import/2011-04-11.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -250,7 +193,7 @@
             }
           },
           {
-            "id": "4b8ed0e87653e537",
+            "id": "bf8ee542664291be",
             "type": "leaf",
             "state": {
               "type": "system3-sync-status",
@@ -284,12 +227,13 @@
   },
   "active": "9ecda1be59750106",
   "lastOpenFiles": [
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Calculations regarding the Data.md",
+    "Finance prep/remote blog 1/README.md",
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Ideal Model Description.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Data Plot.md",
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Project outline.md",
     "Normalized_ETF_Growth.png",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Ideal Model Description.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Data.md",
     "CSV import.base",
     "CSV import/Untitled.md",
@@ -311,7 +255,6 @@
     "CSV import/3759.md",
     "CSV import/3758.md",
     "CSV import/3757.md",
-    "CSV import/3756.md",
     "CSV import",
     "Finance prep/remote blog 1/General information",
     "Life Prep 1",

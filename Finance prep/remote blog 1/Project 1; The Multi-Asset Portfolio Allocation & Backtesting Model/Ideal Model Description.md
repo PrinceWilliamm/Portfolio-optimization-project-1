@@ -3,7 +3,7 @@ Portoflio optimization is pretty self explanatory term but in a packed response,
 	Achieved with risk measures and filteration techniwues for assets (see terminology)
 ## Model
 Modern Portfolio Theory
-	See terminoogy for further info
+	See terminology for further info
 	Basically a theory that has some boundary conditions, but with taking them to account it creates an optimal portfolio with desired amount of risk
 ## Asset Classes
 According to me and a couple of others the basic rich dude has;
