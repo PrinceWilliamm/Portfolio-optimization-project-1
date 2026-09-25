@@ -1,4 +1,4 @@
-## What is portfolio opitmization?
+## What is portfolio optimization?
 Portoflio optimization is pretty self explanatory term but in a packed response, Portfolio optimization tries to create the most optimal returns for a multi-asset investment portfolio with minimum risk.
 	Achieved with risk measures and filteration techniwues for assets (see terminology)
 ## Model
