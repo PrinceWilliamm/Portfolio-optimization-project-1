@@ -45,8 +45,7 @@ A statistic that measures the dispersion of a dataset relative to its mean and i
 	For example, a volatile stock has a high standard deviation, meaning that its price goes up and down frequently. The standard deviation of a stable [blue-chip](https://www.investopedia.com/terms/b/bluechip.asp) stock, on the other hand, is usually rather low, meaning that its price is usually stable.
 	Often used in risk management strategies
 Mathematical representation
-$$\text{Standard Deviation} = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n - 1}}$$
-	Where;
+$$\text{Standard Deviation} = \sqrt{\frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n - 1}}$$Where;
 	$x_i = \text{Value of the } i^{\text{th}} \text{ point in the data set}$
 	$\bar{x} = \text{The mean value of the data set}$
 	$n = \text{The number of data points in the data set}$
