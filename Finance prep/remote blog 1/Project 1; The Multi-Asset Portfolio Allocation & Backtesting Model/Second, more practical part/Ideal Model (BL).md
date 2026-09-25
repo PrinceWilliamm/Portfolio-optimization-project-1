@@ -1,4 +1,5 @@
 **BL model is based on the MPT model but it more refined as an institutional tool.**
+The model has the next parameters and values:
 - **Market Capitalization Weights ($w_{mkt}$):** The baseline assumption that the global financial market is already efficient. You determine the actual real-world size of your assets (e.g., US equities represent roughly 60% of the global stock market, International 40%).
 - **Risk Aversion Parameter ($\delta$):** A measure of how much return the average market participant demands for taking on risk. It is calculated using the market portfolio's expected return and variance.
 - **Implied Equilibrium Returns ($\Pi$):** This is the magic of Black-Litterman. Instead of guessing expected returns, you reverse-engineer them from the covariance matrix ($\boldsymbol{\Sigma}$) and market weights. $\Pi = \delta \boldsymbol{\Sigma} w_{mkt}$. This creates a neutral baseline return vector where no asset dominates the others arbitrarily.
