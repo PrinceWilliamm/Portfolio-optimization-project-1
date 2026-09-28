@@ -1,0 +1,2 @@
+The assets and allocations are going to be variables therefore the answers given can be changed dramatically. The portfolio presented does not equal one right configuration. The model is adjusted to fit clients needs furthermore from more aggressive to the most conservative. 
+The model is also not going to be bilbically accurate as contributor William will add some special volatility spices to it.
