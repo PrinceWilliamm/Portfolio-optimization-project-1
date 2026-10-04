@@ -8,63 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6e8eafb8e7cd2552",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Ideal Model (BL).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Ideal Model (BL)"
-            }
-          },
-          {
-            "id": "2f207deea01ba1ca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Applying math to my variables with code.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Applying math to my variables with code"
-            }
-          },
-          {
-            "id": "cdb7368f9ffa5050",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Finance prep/remote blog 1/General information/AI statement.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AI statement"
-            }
-          },
-          {
             "id": "c1225d3776a4da20",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Applying math to my variables.md",
+                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Before execution + Volatility model.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Applying math to my variables"
+              "title": "Before execution + Volatility model"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -204,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance prep/remote blog 1/General information/AI statement.md",
+                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Before execution + Volatility model.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -268,31 +225,31 @@
       "obsidian-importer:Import notes": false
     }
   },
-  "active": "cdb7368f9ffa5050",
+  "active": "c1225d3776a4da20",
   "lastOpenFiles": [
-    "Finance prep/remote blog 1/General information/Contributor (William).md",
-    "README.md",
-    "Normalized_ETF_Growth.png",
-    "Pasted image 20260925145438.png",
-    "Pasted image 20260925145452.png",
-    "Pasted image 20261002151853.png",
-    "Pasted image 20261002151933.png",
-    "Finance prep/remote blog 1/README.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Before execution + Volatility model.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Math description.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Ideal Model (BL).md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Applying math to my variables with code.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Project outline.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Calculations regarding the Data.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Data Plot.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Ideal Model Description (MPT).md",
+    "Finance prep/General information/Start Here.md",
+    "Finance prep/General information/1st major stock outlook report, Adidas.md",
+    "Finance prep/General information/Third matrix session (stochastic matrices).md",
+    "Finance prep/General information/Contributor (William).md",
+    "Finance prep/General information/AI statement.md",
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Ideal Model (BL).md",
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Math description.md",
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Before execution + Volatility model.md",
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Applying math to my variables with code.md",
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
+    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Project outline.md",
+    "Finance prep/remote blog 1/README.md",
+    "Normalized_ETF_Growth.png",
+    "Pasted image 20260925145438.png",
+    "Pasted image 20260925145452.png",
+    "Pasted image 20261002151933.png",
+    "README.md",
+    "Pasted image 20261002151853.png",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part",
-    "Finance prep/remote blog 1/General information/AI statement.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part",
-    "Finance prep/remote blog 1/General information/Start Here.md",
-    "Finance prep/remote blog 1/General information/1st major stock outlook report, Adidas.md",
-    "Finance prep/remote blog 1/General information/Third matrix session (stochastic matrices).md",
     "CSV import/Untitled.md",
     "CSV import/3261.md",
     "CSV import/2011-03-24.md",
@@ -303,9 +260,8 @@
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Data.md",
     "CSV import.base",
     "CSV import/3774.md",
-    "CSV import/3773.md",
     "CSV import",
-    "Finance prep/remote blog 1/General information",
+    "Finance prep/General information",
     "Life Prep 1",
     "Danielin Evil Väsäys/Initial.canvas",
     "remote blog",
