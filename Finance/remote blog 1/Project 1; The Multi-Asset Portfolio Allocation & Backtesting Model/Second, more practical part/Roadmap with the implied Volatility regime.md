@@ -258,17 +258,14 @@ The regime engine should influence **the strength of the view**, not blindly dic
 # 9. Absolute vs Relative Black-Litterman Views
 Prefer relative views where possible.
 ### Absolute View
-
 ```
 Gold expected return = 8%
 ```
 
 ### Relative View
-
 ```
 Gold expected to outperform S&P 500 by 2%
 ```
-
 Relative views are often more intuitive for a regime model because the system is fundamentally asking:
 > Which assets should outperform or underperform others under this regime?
 
@@ -276,7 +273,6 @@ Relative views are often more intuitive for a regime model because the system is
 # 10. Regime → View Translation
 Create a ruleset.
 Example:
-
 ```
 IF Regime = Low Volatility:
 
@@ -316,7 +312,6 @@ IF Regime = High Volatility:
     - High yield
     - Leveraged exposures
 ```
-
 These are starting hypotheses, not permanent rules.
 They must be validated historically.
 
@@ -344,7 +339,6 @@ The output is the allocation.
 # 12. Portfolio Constraints
 Before optimizing, define constraints.
 Example:
-
 ```
 Portfolio:
 
@@ -381,7 +375,6 @@ This tells the system how assets move relative to each other.
 ## 13.1 Why This Matters
 Two assets can both have high expected returns but still be poor additions if their returns are highly correlated.
 Example:
-
 ```
 Asset A:
 Expected Return = 10%
@@ -393,9 +386,7 @@ Volatility = 14%
 
 Correlation = 0.95
 ```
-
 Versus:
-
 ```
 Asset C:
 Expected Return = 7%
@@ -403,15 +394,11 @@ Volatility = 10%
 
 Correlation with A = 0.15
 ```
-
 Asset C may substantially improve the portfolio's risk-adjusted structure.
 
 ---
-
 # 14. MPT as a Diagnostic Layer
-
 After Black-Litterman generates allocations, use MPT to inspect:
-
 - Expected portfolio return
 - Expected volatility
 - Risk contribution
@@ -419,35 +406,23 @@ After Black-Litterman generates allocations, use MPT to inspect:
 - Correlation
 - Efficient frontier position
 - Portfolio beta
-
 Do NOT automatically choose the highest-return point on the efficient frontier.
-
 The objective is instead:
 
 > Determine whether the BL portfolio achieves an attractive return/risk trade-off within the predefined investment constraints.
-
 ---
-
 # 15. Layer 7 — Risk Decomposition
-
 Do not only look at allocation percentages.
-
 Calculate:
-
 ## Capital Weight
-
 ```
 Asset = 15% of portfolio
 ```
-
 ## Risk Contribution
-
 ```
 Asset = 27% of portfolio risk
 ```
-
 This is much more informative.
-
 Example:
 
 |Asset|Weight|Risk Contribution|
@@ -461,13 +436,9 @@ Example:
 The portfolio may appear diversified by capital but still be dominated by equity risk.
 
 ---
-
 # 16. Layer 8 — Final Portfolio Output
-
 The system should produce a final portfolio dashboard.
-
 ## Current Regime
-
 ```
 Regime:
 HIGH VOLATILITY / STRESS
@@ -484,9 +455,7 @@ Implied Volatility:
 Volatility Percentile:
 91%
 ```
-
 ---
-
 ## Black-Litterman Portfolio
 
 |Asset|Weight|BL View|Confidence|Risk Contribution|
@@ -498,25 +467,18 @@ Volatility Percentile:
 |Cash|15%|Neutral|90%|2%|
 
 ---
-
 # 17. Benchmark Comparison
-
 Always compare against:
-
 ### Benchmark
-
 ```
 100% S&P 500
 ```
-
 ### Portfolio
-
 ```
 BL + Regime Portfolio
 ```
 
 Compare:
-
 - CAGR
 - Annual return
 - Volatility
@@ -529,13 +491,9 @@ Compare:
 - Value of $100
 - Worst year
 - Best year
-
 ---
-
 # 18. Most Important Test: Stress Performance
-
 The system should split the historical sample into regimes.
-
 Example:
 
 |Regime|S&P 500|Portfolio|Difference|
@@ -549,34 +507,25 @@ Example:
 The objective is to discover whether the portfolio gives up some upside while materially improving downside behavior.
 
 ---
-
 # 19. The Core Performance Question
-
 Do not ask:
 
 > "Did the portfolio beat the S&P 500?"
 
 Ask:
-
 > "How much return did we sacrifice in normal/bull markets in exchange for how much drawdown reduction during stressed markets?"
 
 This creates a much more appropriate framework for a defensive / wealth-management strategy.
 
 ---
-
 # 20. Rolling Analysis
-
 Use rolling windows.
-
 Recommended:
-
 - 12-month
 - 24-month
 - 36-month
 - 60-month
-
 Calculate rolling:
-
 - CAGR
 - Volatility
 - Sharpe
@@ -585,105 +534,70 @@ Calculate rolling:
 - Maximum drawdown
 - Downside capture
 - Tracking error
-
 This prevents the model from looking good only because of one particular historical period.
 
 ---
-
 # 21. Regime Stability Test
-
 A major objective is determining:
-
 > Does the regime model actually contain useful information?
 
 For each regime test:
-
 ```
 P(asset outperforms benchmark | regime)
 ```
-
 For example:
-
 ```
 P(Gold > S&P 500 | High Volatility)
 = 68%
 ```
-
 Then:
-
 ```
 P(Managed Futures > S&P 500 | High Volatility)
 = 74%
 ```
-
 The regime model is only useful if these conditional relationships are sufficiently persistent.
 
 ---
-
 # 22. Avoid Look-Ahead Bias
-
 This is critical.
-
 At every historical date:
-
 ```
 Use ONLY information available at that date.
 ```
-
 Never allow:
-
 - Future volatility data
 - Future asset returns
 - Future covariance
 - Future regime labels
 - Future fundamentals
-
 to influence historical portfolio decisions.
-
 The backtest must replicate what the model could actually have known at the time.
 
 ---
-
 # 23. Rolling Covariance Estimation
-
 Do not use one covariance matrix for the entire history.
-
 Instead estimate covariance dynamically.
-
 Example:
-
 ```
 60-day covariance
 120-day covariance
 252-day covariance
 ```
-
 Then test which estimation window provides the most stable portfolio.
-
 Also consider:
-
 - EWMA covariance
 - Shrinkage covariance
 - Regime-conditioned covariance
-
 ---
-
 # 24. Volatility Regime + BL Feedback Loop
-
 The final system should operate as a loop:
-
 The portfolio is therefore continually informed by the current market regime.
 
 ---
-
 # 25. Rebalancing Logic
-
 Do not necessarily rebalance every time the regime changes by one point.
-
 Use confirmation.
-
 Example:
-
 ```
 New regime detected
         ↓
@@ -701,15 +615,11 @@ Apply turnover constraints
         ↓
 Rebalance
 ```
-
 This reduces unnecessary trading.
 
 ---
-
 # 26. Regime Transition Rules
-
 Important transitions:
-
 ```
 Low → Normal
 Normal → Elevated
@@ -719,33 +629,25 @@ Crisis → High
 High → Elevated
 Elevated → Normal
 ```
-
 The transition itself can be a signal.
-
 For example:
-
 > **High volatility + rapidly improving volatility conditions**
 
 may be structurally different from:
 
-> **High volatility + rapidly deteriorating volatility conditions**
+> **High volatility + rapidly deteriorating volatility conditions
 
-Therefore consider both:
+**Therefore consider both:**
 
 ```
 Current Regime
 +
 Regime Direction
 ```
-
 ---
-
 # 27. Confidence Framework
-
 Every decision should have a confidence score.
-
 Example:
-
 ```
 Regime Confidence = 82%
 
@@ -757,11 +659,8 @@ Managed Futures View Confidence = 84%
 
 BL Portfolio Confidence = 76%
 ```
-
 If confidence falls, the model should move closer toward the equilibrium / benchmark portfolio.
-
 This is one of the major advantages of the BL framework:
-
 ```
 Strong View
     ↓
@@ -771,17 +670,11 @@ Weak View
     ↓
 Stay closer to equilibrium
 ```
-
 ---
-
 # 28. Portfolio States
-
 Create three portfolio states.
-
 ## Defensive
-
 Triggered by:
-
 ```
 High volatility
 +
@@ -791,37 +684,25 @@ High drawdown
 +
 Strong stress indicators
 ```
-
 Goal:
-
 - Reduce beta
 - Reduce drawdown
 - Increase diversification
 - Preserve capital
-
 ---
-
 ## Neutral
-
 Triggered by:
-
 ```
 Normal volatility
 +
 No major directional signals
 ```
-
 Goal:
-
 - Stay close to strategic allocation
 - Avoid unnecessary turnover
-
 ---
-
 ## Risk-On
-
 Triggered by:
-
 ```
 Low volatility
 +
@@ -831,19 +712,13 @@ Healthy breadth
 +
 Low systemic stress
 ```
-
 Goal:
-
 - Increase equity participation
 - Allow higher beta
 - Increase growth exposure
-
 ---
-
 # 29. Model Hierarchy
-
 The final hierarchy should be:
-
 ```
 LEVEL 1
 Market Data
@@ -875,13 +750,9 @@ Stress Testing
 LEVEL 10
 Performance Evaluation
 ```
-
 ---
-
 # 30. Development Roadmap
-
 ## Phase 1 — Build the Asset Universe
-
 - [ ]  Select 15–30 liquid assets
 - [ ]  Group assets by asset class
 - [ ]  Obtain historical price data
@@ -889,11 +760,8 @@ Performance Evaluation
 - [ ]  Define benchmark
 - [ ]  Define trading calendar
 - [ ]  Define transaction-cost assumptions
-
 ---
-
 ## Phase 2 — Build the Volatility Engine
-
 - [ ]  Obtain option / implied-volatility data
 - [ ]  Construct volatility surface
 - [ ]  Calculate volatility percentiles
@@ -904,11 +772,8 @@ Performance Evaluation
 - [ ]  Add market breadth
 - [ ]  Add credit-stress indicators
 - [ ]  Create regime classifier
-
 ---
-
 ## Phase 3 — Validate Regimes
-
 - [ ]  Identify historical regimes
 - [ ]  Test regime persistence
 - [ ]  Test regime transitions
@@ -918,13 +783,9 @@ Performance Evaluation
 - [ ]  Calculate conditional drawdowns
 - [ ]  Rank assets by regime
 - [ ]  Determine whether regime classification adds predictive value
-
 ---
-
 ## Phase 4 — Build the View Engine
-
 For every regime:
-
 - [ ]  Identify positive assets
 - [ ]  Identify neutral assets
 - [ ]  Identify negative assets
@@ -932,11 +793,8 @@ For every regime:
 - [ ]  Assign confidence
 - [ ]  Convert rankings into BL views
 - [ ]  Test absolute vs relative views
-
 ---
-
 ## Phase 5 — Build Black-Litterman
-
 - [ ]  Calculate benchmark weights
 - [ ]  Calculate covariance matrix
 - [ ]  Calculate market-implied returns
@@ -947,11 +805,8 @@ For every regime:
 - [ ]  Calculate posterior covariance
 - [ ]  Optimize portfolio
 - [ ]  Apply portfolio constraints
-
 ---
-
 ## Phase 6 — Add MPT Risk Layer
-
 - [ ]  Portfolio volatility
 - [ ]  Correlation matrix
 - [ ]  Risk contribution
@@ -960,11 +815,8 @@ For every regime:
 - [ ]  Efficient frontier
 - [ ]  Expected risk/return
 - [ ]  Concentration analysis
-
 ---
-
 ## Phase 7 — Backtest
-
 - [ ]  Backtest entire historical period
 - [ ]  Use walk-forward methodology
 - [ ]  Use only information available at each date
@@ -973,13 +825,9 @@ For every regime:
 - [ ]  Include rebalancing costs
 - [ ]  Track turnover
 - [ ]  Record regime at every rebalance
-
 ---
-
 ## Phase 8 — Stress Testing
-
 Test separately during:
-
 - [ ]  Equity bear markets
 - [ ]  Volatility spikes
 - [ ]  Recession periods
@@ -990,28 +838,18 @@ Test separately during:
 - [ ]  Rapid volatility reversals
 
 ---
-
 ## Phase 9 — Benchmark Comparison
-
 Compare:
-
 ### Portfolio
-
 Regime + Black-Litterman
-
 ### Benchmark
-
 100% S&P 500
-
 ### Optional Additional Benchmarks
-
 - 60/40
 - Global 60/40
 - Risk parity
 - Minimum volatility
-
 Compare:
-
 - [ ]  CAGR
 - [ ]  Volatility
 - [ ]  Sharpe
@@ -1025,13 +863,9 @@ Compare:
 - [ ]  Information ratio
 - [ ]  Worst year
 - [ ]  Best year
-
 ---
-
 # 31. Final Dashboard
-
 The finished model should have four primary panels.
-
 ## PANEL 1 — MARKET REGIME
 
 ```
@@ -1045,7 +879,6 @@ Regime Direction
 ```
 
 ---
-
 ## PANEL 2 — REGIME ASSET SCORE
 
 ```
@@ -1057,13 +890,11 @@ Drawdown
 Correlation
 Regime Score
 ```
-
 This panel answers:
 
 > "What has historically worked in the current environment?"
 
 ---
-
 ## PANEL 3 — BLACK-LITTERMAN PORTFOLIO
 
 ```
@@ -1075,13 +906,11 @@ Posterior Return
 Final Weight
 Risk Contribution
 ```
-
 This panel answers:
 
 > "Given those views, what should I actually own?"
 
 ---
-
 ## PANEL 4 — PORTFOLIO VS BENCHMARK
 
 ```
@@ -1095,17 +924,13 @@ Maximum Drawdown
 Downside Capture
 Recovery Time
 ```
-
 This panel answers:
 
 > "Did the portfolio achieve its actual objective?"
 
 ---
-
 # 32. Ultimate Decision Process
-
 At every rebalance:
-
 ```
 1. What volatility regime are we in?
 
@@ -1137,9 +962,7 @@ At every rebalance:
 
 12. Rebalance only if the change is economically meaningful.
 ```
-
 ---
-
 # 33. The Core Philosophy
 
 > **The regime model determines the environment.**
@@ -1153,13 +976,8 @@ At every rebalance:
 > **Backtesting determines whether the entire process actually works.**
 
 The intended outcome is therefore **not maximum return**.
-
 It is:
-
 > **Consistent compounding + controlled drawdowns + intelligent participation in risk-on markets + materially better behavior during volatility and bear markets.**
-
-```
-
 ### The most important design choice
 
 I would **not** make the volatility model say something like:
@@ -1179,10 +997,4 @@ That gives you a genuinely hierarchical model:
 **Regime → Views → BL → Weights → Risk → Performance.**
 
 And that is the architecture I would build around for your original goal of accepting some relative underperformance in strong bull markets in exchange for substantially better behavior during high-volatility bear markets. 
-
-Refine the regime-to-BL workflow
-
-- :contentReference[oaicite:1]{index=1}
-- :contentReference[oaicite:2]{index=2}
-```
-
+``

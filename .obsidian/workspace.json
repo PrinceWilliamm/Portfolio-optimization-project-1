@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Implying a Volatility model.md",
+                "file": "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Implying a Volatility model.md",
                 "mode": "source",
                 "source": false
               },
@@ -27,16 +27,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Roadmap with the implied Volatility regime.md",
+                "file": "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Roadmap with the implied Volatility regime.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Roadmap with the implied Volatility regime"
             }
+          },
+          {
+            "id": "3e39afff595d9ba5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Execution according to roadmap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Execution according to roadmap"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -176,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Roadmap with the implied Volatility regime.md",
+                "file": "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Execution according to roadmap.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -208,7 +222,7 @@
             }
           },
           {
-            "id": "1ce4571f49c98806",
+            "id": "c47cb1bc264ddc7c",
             "type": "leaf",
             "state": {
               "type": "system3-sync-status",
@@ -240,32 +254,33 @@
       "obsidian-importer:Import notes": false
     }
   },
-  "active": "35f45f3c5d422a9f",
+  "active": "3e39afff595d9ba5",
   "lastOpenFiles": [
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Implying a Volatility model.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Roadmap with the implied Volatility regime.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Applying math to my variables with code.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Math description.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Ideal Model (BL).md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Calculations regarding the Data.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Data Plot.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Ideal Model Description (MPT).md",
-    "Finance prep/General information/Start Here.md",
-    "Finance prep/General information/1st major stock outlook report, Adidas.md",
-    "Finance prep/General information/Third matrix session (stochastic matrices).md",
-    "Finance prep/General information/Contributor (William).md",
-    "Finance prep/General information/AI statement.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Project outline.md",
-    "Finance prep/remote blog 1/README.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Roadmap with the implied Volatility regime.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Execution according to roadmap.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Implying a Volatility model.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Applying math to my variables with code.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Math description.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Ideal Model (BL).md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Calculations regarding the Data.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Data Plot.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Ideal Model Description (MPT).md",
+    "Finance/General information/Start Here.md",
+    "Finance/General information/1st major stock outlook report, Adidas.md",
+    "Finance/General information/Third matrix session (stochastic matrices).md",
+    "Finance/General information/Contributor (William).md",
+    "Finance/General information/AI statement.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Terminology and useful information for the Project in question.md",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Project outline.md",
+    "Finance/remote blog 1/README.md",
     "Normalized_ETF_Growth.png",
     "Pasted image 20260925145438.png",
     "Pasted image 20260925145452.png",
     "Pasted image 20261002151933.png",
     "README.md",
     "Pasted image 20261002151853.png",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part",
     "CSV import/Untitled.md",
     "CSV import/3261.md",
     "CSV import/2011-03-24.md",
@@ -275,14 +290,13 @@
     "CSV import/2011-04-11.md",
     "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Data.md",
     "CSV import.base",
-    "CSV import/3774.md",
     "CSV import",
-    "Finance prep/General information",
+    "Finance/General information",
     "Life Prep 1",
     "Danielin Evil Väsäys/Initial.canvas",
     "remote blog",
-    "Finance prep/remote blog 1",
-    "Finance prep/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model",
+    "Finance/remote blog 1",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model",
     "Trading Journey/START HERE/MA Crossover Backtester in streamit.pdf"
   ]
 }
