@@ -1,5 +1,5 @@
 # 1. Abstract
-Full on map to locate you as a reader to what are the processes of this rather complex filtering and optimizing process. This map is mostly created by AI to resemble the descriptions and prompts crwated by Contributor William in order to maintain balance.
+Full on map to locate you as a reader to what are the processes of this rather complex filtering and optimizing process. This map is formatted by AI to resemble the descriptions and prompts but finessed and detailed by Contributor William in order to maintain balance.
 
 ---
 # 2. Main Objective
@@ -106,9 +106,7 @@ Use multiple dimensions.
 ---
 # 5. Regime Classification
 Create a regime score.
-Example:
-
-```
+#### Example:
 Regime Score =
     Volatility Level
   + Volatility Momentum
@@ -116,12 +114,10 @@ Regime Score =
   + Equity Drawdown
   + Credit Stress
   + Market Breadth
-```
+
 The exact formula should be determined through testing.
 The output should be something like:
-```
 Current Regime:
-
 R4 — High Volatility / Stress
 
 Confidence:
@@ -136,7 +132,7 @@ R2 = 12%
 R3 = 31%
 R4 = 45%
 R5 = 8%
-```
+
 ---
 # 6. Layer 3 — Regime-Based Asset Analysis
 The regime engine now asks:
@@ -170,14 +166,12 @@ For every asset calculate:
 # 7. Regime Asset Score
 Create a regime-specific score.
 Example:
-```
 Asset Regime Score =
     30% Risk-Adjusted Return
     25% Downside Protection
     20% Drawdown
     15% Volatility
     10% Consistency
-```
 This weighting should eventually be optimized through research rather than assumed.
 Example output:
 ## Current Regime: High Volatility
@@ -393,22 +387,13 @@ The portfolio may appear diversified by capital but still be dominated by equity
 # 16. Layer 8 — Final Portfolio Output
 The system should produce a final portfolio dashboard.
 ## Current Regime
-```
-Regime:
-HIGH VOLATILITY / STRESS
+**Regime:**
+*HIGH VOLATILITY / STRESS*
+Confidence = 82%
+S&P 500 Drawdown = -17.4%
+Implied Volatility = 34.8
+Volatility Percentile = 91%
 
-Confidence:
-82%
-
-S&P 500 Drawdown:
--17.4%
-
-Implied Volatility:
-34.8
-
-Volatility Percentile:
-91%
-```
 ---
 ## Black-Litterman Portfolio
 
@@ -424,14 +409,9 @@ Volatility Percentile:
 # 17. Benchmark Comparison
 Always compare against:
 ### Benchmark
-```
 100% S&P 500
-```
 ### Portfolio
-```
 BL + Regime Portfolio
-```
-
 Compare:
 - CAGR
 - Annual return
@@ -469,7 +449,7 @@ Do not ask:
 Ask:
 > "How much return did we sacrifice in normal/bull markets in exchange for how much drawdown reduction during stressed markets?"
 
-This creates a much more appropriate framework for a defensive / wealth-management strategy.
+This creates a much more appropriate framework for a defensive / wealth-management strategy. In the end, the most basic investing advise is that Do not have all of your eggs in the same basket and having everything in SP500 is exactly that.
 
 ---
 # 20. Rolling Analysis
@@ -496,34 +476,24 @@ A major objective is determining:
 > Does the regime model actually contain useful information?
 
 For each regime test:
-```
-P(asset outperforms benchmark | regime)
-```
-For example:
-```
-P(Gold > S&P 500 | High Volatility)
-= 68%
-```
-Then:
-```
-P(Managed Futures > S&P 500 | High Volatility)
-= 74%
-```
+$P(\text{Asset outperforms benchmark} \mid \text{regime})$
+**For example:**
+- $P(\text{Gold} > \text{S\&P } 500 \mid \text{High Volatility}) = 68\%$
+**Then:**
+- $P(\text{Managed Futures} > \text{S\&P } 500 \mid \text{High Volatility}) = 74\%$
 The regime model is only useful if these conditional relationships are sufficiently persistent.
 
 ---
 # 22. Avoid Look-Ahead Bias
 This is critical.
 At every historical date:
-```
-Use ONLY information available at that date.
-```
-Never allow:
-- Future volatility data
-- Future asset returns
-- Future covariance
-- Future regime labels
-- Future fundamentals
+	Use ONLY information available at that date.
+		Never allow:
+		- Future volatility data
+		- Future asset returns
+		- Future covariance
+		- Future regime labels
+		- Future fundamentals
 to influence historical portfolio decisions.
 The backtest must replicate what the model could actually have known at the time.
 
@@ -531,12 +501,10 @@ The backtest must replicate what the model could actually have known at the time
 # 23. Rolling Covariance Estimation
 Do not use one covariance matrix for the entire history.
 Instead estimate covariance dynamically.
-Example:
-```
-60-day covariance
-120-day covariance
-252-day covariance
-```
+#### Example:
+- 60-day covariance
+- 120-day covariance
+- 252-day covariance
 Then test which estimation window provides the most stable portfolio.
 Also consider:
 - EWMA covariance
@@ -551,8 +519,7 @@ The portfolio is therefore continually informed by the current market regime.
 # 25. Rebalancing Logic
 Do not necessarily rebalance every time the regime changes by one point.
 Use confirmation.
-Example:
-```
+#### Example:
 New regime detected
         ↓
 Confirm for 3–5 trading days
@@ -568,21 +535,18 @@ Compare new weights with current weights
 Apply turnover constraints
         ↓
 Rebalance
-```
 This reduces unnecessary trading.
 
 ---
 # 26. Regime Transition Rules
 Important transitions:
-```
-Low → Normal
-Normal → Elevated
-Elevated → High
-High → Crisis
-Crisis → High
-High → Elevated
-Elevated → Normal
-```
+1. Low → Normal
+2. Normal → Elevated
+3. Elevated → High
+4. High → Crisis
+5. Crisis → High
+6. High → Elevated
+7. Elevated → Normal
 The transition itself can be a signal.
 For example:
 > **High volatility + rapidly improving volatility conditions**
@@ -592,30 +556,22 @@ may be structurally different from:
 > **High volatility + rapidly deteriorating volatility conditions
 
 **Therefore consider both:**
-
-```
 Current Regime
 +
 Regime Direction
-```
+
 ---
 # 27. Confidence Framework
 Every decision should have a confidence score.
-Example:
-```
+#### Example:
 Regime Confidence = 82%
-
 Gold View Confidence = 74%
-
 Treasury View Confidence = 79%
-
 Managed Futures View Confidence = 84%
-
 BL Portfolio Confidence = 76%
-```
+
 If confidence falls, the model should move closer toward the equilibrium / benchmark portfolio.
 This is one of the major advantages of the BL framework:
-```
 Strong View
     ↓
 Meaningful deviation from equilibrium
@@ -623,13 +579,12 @@ Meaningful deviation from equilibrium
 Weak View
     ↓
 Stay closer to equilibrium
-```
+
 ---
 # 28. Portfolio States
 Create three portfolio states.
 ## Defensive
 Triggered by:
-```
 High volatility
 +
 Negative equity momentum
@@ -637,7 +592,6 @@ Negative equity momentum
 High drawdown
 +
 Strong stress indicators
-```
 Goal:
 - Reduce beta
 - Reduce drawdown
@@ -646,18 +600,15 @@ Goal:
 ---
 ## Neutral
 Triggered by:
-```
 Normal volatility
 +
 No major directional signals
-```
 Goal:
 - Stay close to strategic allocation
 - Avoid unnecessary turnover
 ---
 ## Risk-On
 Triggered by:
-```
 Low volatility
 +
 Positive equity momentum
@@ -665,7 +616,6 @@ Positive equity momentum
 Healthy breadth
 +
 Low systemic stress
-```
 Goal:
 - Increase equity participation
 - Allow higher beta
@@ -673,7 +623,6 @@ Goal:
 ---
 # 29. Model Hierarchy
 The final hierarchy should be:
-```
 LEVEL 1
 Market Data
         ↓
@@ -703,7 +652,7 @@ Stress Testing
         ↓
 LEVEL 10
 Performance Evaluation
-```
+
 ---
 # 30. Development Roadmap
 ## Phase 1 — Build the Asset Universe
@@ -821,8 +770,6 @@ Compare:
 # 31. Final Dashboard
 The finished model should have four primary panels.
 ## PANEL 1 — MARKET REGIME
-
-```
 Current Regime
 Volatility
 Volatility Percentile
@@ -830,12 +777,9 @@ Term Structure
 Equity Drawdown
 Regime Probability
 Regime Direction
-```
 
 ---
 ## PANEL 2 — REGIME ASSET SCORE
-
-```
 Asset
 Regime Return
 Risk
@@ -843,15 +787,12 @@ Sortino
 Drawdown
 Correlation
 Regime Score
-```
-This panel answers:
 
+This panel answers:
 > "What has historically worked in the current environment?"
 
 ---
 ## PANEL 3 — BLACK-LITTERMAN PORTFOLIO
-
-```
 Asset
 Benchmark Weight
 BL View
@@ -859,15 +800,12 @@ Confidence
 Posterior Return
 Final Weight
 Risk Contribution
-```
-This panel answers:
 
+This panel answers:
 > "Given those views, what should I actually own?"
 
 ---
 ## PANEL 4 — PORTFOLIO VS BENCHMARK
-
-```
 CAGR
 Annual Return
 Volatility
@@ -877,45 +815,31 @@ Sortino
 Maximum Drawdown
 Downside Capture
 Recovery Time
-```
-This panel answers:
 
+This panel answers:
 > "Did the portfolio achieve its actual objective?"
 
 ---
 # 32. Ultimate Decision Process
 At every rebalance:
-```
 1. What volatility regime are we in?
-
 2. How confident are we in that regime?
-
 3. Which assets historically perform best in this regime?
-
 4. Are these relationships statistically robust?
-
 5. What investment views does that create?
-
 6. How confident are we in each view?
-
 7. What does Black-Litterman produce when combining:
    - Market equilibrium
    - Regime views
    - Confidence
    - Covariance
    - Constraints?
-
-8. What is the portfolio's expected risk?
-
-9. How much risk is each asset actually contributing?
-
-10. How does the portfolio behave relative to the S&P 500?
-
-11. Does the portfolio improve downside behavior enough
+1. What is the portfolio's expected risk?
+2. How much risk is each asset actually contributing?
+3. How does the portfolio behave relative to the S&P 500?
+4. Does the portfolio improve downside behavior enough
     to justify any sacrificed upside?
-
-12. Rebalance only if the change is economically meaningful.
-```
+5. Rebalance only if the change is economically meaningful.
 ---
 # 33. The Core Philosophy
 
