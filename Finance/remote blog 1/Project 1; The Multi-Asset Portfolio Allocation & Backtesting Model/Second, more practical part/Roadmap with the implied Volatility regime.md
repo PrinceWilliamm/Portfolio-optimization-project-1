@@ -1,5 +1,5 @@
 # 1. Abstract
-Full on map to locate you as a reader to what are the processes of this rather complex filtering and optimizing process
+Full on map to locate you as a reader to what are the processes of this rather complex filtering and optimizing process. This map is mostly created by AI to resemble the descriptions and prompts crwated by Contributor William in order to maintain balance.
 
 ---
 # 2. Main Objective
@@ -198,15 +198,14 @@ This does **not** mean:
 > The regime engine believes managed futures currently deserve a stronger positive view than Nasdaq.
 	**That distinction is critical.
 ---
-
 # 8. Layer 4 — Convert Regime Signals Into Black-Litterman Views
 This is the bridge between the two models.
-The regime model should **NOT directly produce portfolio weights**.
-Instead it produces **views**.
+The regime model should NOT directly produce portfolio weights**.
+Instead it produces **views**. The hole purpose is that the Volatility regime creates insights which the Black Litterman model later on evaluates and allocates resources to opitmized assets.
 
 ---
 ## 8.1 Black-Litterman Inputs
-Black-Litterman requires three major components:
+Black-Litterman requires **three** *major* components:
 ### Equilibrium returns
 Derived from the market portfolio.
 
