@@ -844,13 +844,13 @@ At every rebalance:
 # 33. The Core Philosophy
 
 > **The regime model determines the environment.**
-
+> 
 > **The regime analysis determines which assets deserve attention.**
-
+> 
 > **Black-Litterman determines how strongly those views should influence the portfolio.**
-
+> 
 > **MPT determines how the assets interact from a risk perspective.**
-
+> 
 > **Backtesting determines whether the entire process actually works.**
 
 The intended outcome is therefore **not maximum return**.
