@@ -208,35 +208,25 @@ Instead it produces **views**. The hole purpose is that the Volatility regime cr
 Black-Litterman requires **three** *major* components:
 ### Equilibrium returns
 Derived from the market portfolio.
-
-```
-Π = δΣw
-```
-Where:
-- Π = equilibrium expected returns
-- δ = risk-aversion coefficient
-- Σ = covariance matrix
-- w = benchmark / market-cap weights
+$$\Pi = \delta \Sigma w$$
+**Where:**
+- $\Pi = \text{equilibrium expected returns}$
+- $\delta = \text{risk-aversion coefficient}$
+- $\Sigma = \text{covariance matrix}$
+- $w = \text{benchmark / market-cap weights}$
 ---
 ### B. Investor / Regime Views
 The volatility model generates views.
 Example:
-
-```
-Current regime = High Volatility
-
-View 1:
+*Current regime* = **High Volatility**
+#### View 1:
 Managed Futures will outperform S&P 500.
-
-View 2:
+#### View 2:
 Gold will outperform global equities.
-
-View 3:
+#### View 3:
 Long-duration government bonds will outperform high-yield bonds.
-
-View 4:
+#### View 4:
 Nasdaq will underperform defensive assets.
-```
 
 ---
 ### C. View Confidence
@@ -257,67 +247,50 @@ The regime engine should influence **the strength of the view**, not blindly dic
 # 9. Absolute vs Relative Black-Litterman Views
 Prefer relative views where possible.
 ### Absolute View
-```
 Gold expected return = 8%
-```
-
 ### Relative View
-```
 Gold expected to outperform S&P 500 by 2%
-```
 Relative views are often more intuitive for a regime model because the system is fundamentally asking:
 > Which assets should outperform or underperform others under this regime?
 
 ---
 # 10. Regime → View Translation
 Create a ruleset.
-Example:
-```
-IF Regime = Low Volatility:
-
-    Increase positive views on:
+### Example:
+IF Regime = **Low Volatility:**
+Increase positive views on:
     - Equities
     - Growth
     - Small caps
     - Credit
-
     Reduce defensive views.
-
-IF Regime = Normal:
-
+IF Regime = **Normal:**
     Maintain neutral / modest views.
-
-IF Regime = Elevated:
-
-    Increase views on:
+IF Regime = **Elevated:**
+Increase views on:
     - Quality
     - Treasuries
     - Gold
     - Defensive equities
     - Managed futures
-
-IF Regime = High Volatility:
-
-    Stronger positive views on:
+IF Regime = **High Volatility:**
+Stronger positive views on:
     - Defensive assets
     - Treasuries
     - Gold
     - Managed futures
     - Cash
-
-    Negative / weaker views on:
+Negative / weaker views on:
     - High beta equities
     - Small caps
     - High yield
     - Leveraged exposures
-```
-These are starting hypotheses, not permanent rules.
-They must be validated historically.
+> These are starting hypotheses, not permanent rules.
+> They must be validated historically.
 
 ---
 # 11. Layer 5 — Black-Litterman Optimization
 Black-Litterman combines:
-```
 Market Equilibrium
         +
 Regime-Based Views
@@ -331,68 +304,53 @@ Portfolio Constraints
 Posterior Expected Returns
         ↓
 Optimal Portfolio Weights
-```
 The output is the allocation.
 
 ---
 # 12. Portfolio Constraints
 Before optimizing, define constraints.
-Example:
-```
-Portfolio:
-
-Minimum allocation per asset: 0%
-
-Maximum allocation per asset: 25%
-
-Maximum equity allocation: 60%
-
-Minimum defensive allocation: 20%
-
-Maximum portfolio volatility: 12%
-
-Maximum portfolio beta: 0.70
-
-Maximum turnover: 15%
-
-Maximum single-sector exposure: 20%
-```
-These parameters should be configurable.
+#### Example:
+**Portfolio:**
+	Minimum allocation per asset: 0%
+	Maximum allocation per asset: 25%
+	Maximum equity allocation: 60%
+	Minimum defensive allocation: 20%
+	Maximum portfolio volatility: 12%
+	Maximum portfolio beta: 0.70
+	Maximum turnover: 15%
+	Maximum single-sector exposure: 20%
+> These parameters should be configurable.
 
 ---
 # 13. Layer 6 — MPT
-MPT remains relevant, but mainly underneath Black-Litterman.
+MPT remains relevant, but mainly underneath Black-Litterman. As we can see in the whole project, MPT is somehthing that is more of a confirmative model and used to help the Black Litterman
 Use MPT for:
 ### Covariance
 Estimate:
-```
-Σ = Asset Covariance Matrix
-```
+$\Sigma$ = Asset Covariance Matrix
 This tells the system how assets move relative to each other.
 
 ---
 ## 13.1 Why This Matters
 Two assets can both have high expected returns but still be poor additions if their returns are highly correlated.
-Example:
-```
-Asset A:
+#### Example:
+**Asset A:**
 Expected Return = 10%
 Volatility = 15%
 
-Asset B:
+**Asset B:**
 Expected Return = 9%
 Volatility = 14%
 
 Correlation = 0.95
-```
+
 Versus:
-```
-Asset C:
+
+**Asset C:**
 Expected Return = 7%
 Volatility = 10%
 
 Correlation with A = 0.15
-```
 Asset C may substantially improve the portfolio's risk-adjusted structure.
 
 ---
@@ -411,18 +369,15 @@ The objective is instead:
 > Determine whether the BL portfolio achieves an attractive return/risk trade-off within the predefined investment constraints.
 ---
 # 15. Layer 7 — Risk Decomposition
-Do not only look at allocation percentages.
+Do not only look at allocation percentages. As we can see form other models in the past, simplifications often cause misleadings or otherwise twisted views and opinions, furthemore increasing error margin.
 Calculate:
 ## Capital Weight
-```
-Asset = 15% of portfolio
-```
+**Asset** = *15% of portfolio*
 ## Risk Contribution
-```
-Asset = 27% of portfolio risk
-```
+
+**Asset** = *27% of portfolio risk*
 This is much more informative.
-Example:
+#### Example:
 
 |Asset|Weight|Risk Contribution|
 |---|---|---|
