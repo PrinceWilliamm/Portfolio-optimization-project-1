@@ -21,15 +21,15 @@ Configured objective:
 
 Point-in-time BL result:
 
-| Metric | Result |
-|---|---:|
-| Expected BL return | 5.97% |
-| Expected stress return | -16.88% |
-| Expected volatility | 20.67% |
-| Expected beta | 0.35 |
-| Optimizer status | RELAXED_BEST_EFFORT |
-| Return shortfall vs hurdle | 4.53% |
-| Volatility excess | 0.96% |
+| Metric                     |              Result |
+| -------------------------- | ------------------: |
+| Expected BL return         |               5.97% |
+| Expected stress return     |             -16.88% |
+| Expected volatility        |              20.67% |
+| Expected beta              |                0.35 |
+| Optimizer status           | RELAXED_BEST_EFFORT |
+| Return shortfall vs hurdle |               4.53% |
+| Volatility excess          |               0.96% |
 
 Interpretation: in the synthetic example, the 10.5% return hurdle and 50%-of-S&P-volatility ceiling cannot simultaneously be met with the available universe and constraints. The model explicitly surfaces this instead of presenting a false success.
 
