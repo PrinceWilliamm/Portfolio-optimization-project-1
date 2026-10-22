@@ -10,7 +10,7 @@ Various topics in math
 	Beginner Calculus
 	Beginner Complex calculus
 	Intermediate Linear Algebra
-	Beginner Probability measures including basics of markov chains
+	Beginner Probability measures including basics of Markov Chains
 Topics from finance and trading
 	3 years of experience in paper trading
 	3 years of experience form various trading strategies
