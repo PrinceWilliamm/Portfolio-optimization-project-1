@@ -11,6 +11,3 @@ More theoretical
 ## Second part of the project (Black-Litterman model)*
 More institutional and therefore practical
 	To build the Black-Litterman framework, you must transition away from using historical mean returns as your expected returns. Instead, the model follows a specific, step-by-step mathematical logic.
-## How to Larp*
-For my resume, an explicit example of larping would be the next textual example
-	_Developed a multi-asset class portfolio optimization model in Excel/Python utilizing Modern Portfolio Theory; backtested historical risk-adjusted returns (Sharpe ratio) across 3 distinct economic cycles to design a risk-aligned asset allocation strategy._
