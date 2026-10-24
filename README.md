@@ -1,84 +1,151 @@
-# Volatility-Regime Core-Satellite Portfolio Model & Options-Driven Black-Litterman Framework
-An institutional-grade portfolio optimization and dynamic asset allocation framework written in Python. This repository combines forward-looking options market metrics (At-The-Money Implied Volatility, Term Structure Slope, and Downside Skew) with **Modern Portfolio Theory (MPT)** and the **Black-Litterman Model** to construct dynamic, crash-resistant wealth management portfolios.
-## Key Features
-- **Forward-Looking Options Surface Signals:** Replaces backward-looking historical variance with options-implied volatility ($IV_{\text{ATM}}$) and tracks term structure slope ($IV_{\text{3M}} - IV_{\text{1M}}$) and downside volatility skew ($IV_{90\%} - IV_{\text{ATM}}$).
-- **4-Stage Volatility Regime Classification:** Automatically categorizes market environments into **Low** (31% historical frequency), **Normal** (35%), **Elevated** (25%), and **High / Stress** (9%) states.
-- **Black-Litterman Integration:** Blends market equilibrium baseline returns ($\boldsymbol{\Pi} = \delta \boldsymbol{\Sigma} \mathbf{w}_{\text{mkt}}$) with options-derived quantitative views ($P$, $Q$), dynamically scaling view uncertainty ($\boldsymbol{\Omega}$) based on term structure inversion and skew spikes.
-- **Core-Satellite Governance:** Enforces structural asset boundaries (70–80% Core broad beta, 20–30% Satellite tactical growth/hedging) to eliminate single-factor concentration risks.
-- **Downside Risk Analytics:** Measures Maximum Drawdown (MDD), Sortino Ratio, Value at Risk (VaR), Conditional VaR (CVaR), and upside/downside market capture ratios.
-- **Interactive Streamlit Dashboard:** Live UI displaying option surface metrics, regime historical performance, and interactive allocation sliders.
-## Asset Universe & Strategic Roles
-The model operates across six asset classes designed to optimize correlation decay during market stress:
-	The assets **can** be modified to any needs one client might have, but these are just representations of basics
+# Regime + Black-Litterman Portfolio Model
 
-|**Asset Class**|**Primary Tickers**|**Strategic Role**|**Baseline Weight**|
-|---|---|---|---|
-|**US Equities**|`VOO` / `SPY`|Broad Core Equity Beta|25.0%|
-|**International Equities**|`VXUS` / `VEU`|Global Diversification|25.0%|
-|**Government Bonds**|`GOVT` / `TLT`|Deflationary Risk-Off Anchor|10.0%|
-|**Short-Duration / Cash**|`SGOV` / `BIL`|Capital Preservation / Liquidity|10.0%|
-|**Gold & Commodities**|`GLD` / `DBC`|Real Asset Inflation Hedge|20.0%|
-|**Defensive Alternatives**|`XLP` / `XLU`|Low-Beta Sector Overlay|10.0%|
+A volatility-aware portfolio research framework. It reads the market's risk regime from the S&P 500 implied volatility surface, turns that regime into relative investment views, and lets Black-Litterman decide how far the portfolio moves away from its equilibrium prior.
 
-## Historical Performance & Risk Benchmarks
-Backtested against the S&P 500 across full market cycles (October 2007 – 2026):
-With the given allocations and assets I reached the following results
+> [!warning]
+> The default demo runs on **deterministic synthetic data**. It demonstrates the pipeline mechanics only. It is not real market performance and not an investment recommendation.
 
-|**Performance / Risk Metric**|**Model Portfolio**|**S&P 500 Benchmark**|**Relative Spread / Benefit**|
-|---|---|---|---|
-|**Compound Annual Growth Rate (CAGR)**|**6.7%**|10.7%|Defensive growth profile|
-|**Annualized Volatility ($\sigma$)**|**10.4%**|15.5%|**-5.1% Risk Reduction**|
-|**Maximum Drawdown (MDD)**|**-34.4%**|-50.9%|**+16.5% Drawdown Mitigation**|
-|**Drawdown Recovery Period**|**31 months**|52 months|**21 months faster recovery**|
-|**Portfolio Beta ($\beta$)**|**0.60**|1.00|Controlled market exposure|
-|**Downside Capture Ratio**|**60%**|100%|40% loss mitigation in down years|
-|**Sortino Ratio ($R_f = 0\%$)**|**0.70**|0.91|Downside-adjusted return|
+---
 
-## Quantitative Methodology & Mathematical Framework
+## Quick Start
 
-### 1. Black-Litterman Implied Equilibrium Returns ($\boldsymbol{\Pi}$)
+**Run the demo in three commands:**
 
-Reverse-engineers global market consensus expected returns using the covariance matrix ($\boldsymbol{\Sigma}$) and global market capitalization weights ($\mathbf{w}_{\text{mkt}}$):
-
-$$\boldsymbol{\Pi} = \delta \boldsymbol{\Sigma} \mathbf{w}_{\text{mkt}}$$
-
-Where $\delta \approx 2.5$ represents the market risk-aversion coefficient.
-
-### 2. Options-Driven Views ($P, Q$) & Uncertainty ($\boldsymbol{\Omega}$)
-
-Tactical views are automatically formulated from option chain pricing:
-
-- **Term Slope Condition ($IV_{3\text{M}} - IV_{1\text{1M}} < 0$):** Indicates near-term market turbulence. Generates a view $Q$ where Short Cash (`SGOV`) and Treasuries (`GOVT`) outperform Equities (`SPY`) by $5.0\%$.
-    
-- **Downside Skew Condition ($IV_{90\%} - IV_{\text{ATM}} > +5.0\text{ pts}$):** Indicates high institutional demand for protective puts. Increases view weight towards Gold (`GLD`) and Defensive Sectors (`XLP`).
-    
-
-The view uncertainty matrix ($\boldsymbol{\Omega}$) is scaled continuously using the signal intensity:
-
-$$\Omega_{k,k} = \tau \left( P_k \boldsymbol{\Sigma} P_k^T \right) \cdot f(\text{Term Slope}, \text{Skew})$$
-
-### 3. Posterior Master Equation
-
-Combining market equilibrium with quantitative options views yields the updated return vector $E[R]$:
-
-$$E[R] = \left[ (\tau \boldsymbol{\Sigma})^{-1} + P^T \boldsymbol{\Omega}^{-1} P \right]^{-1} \left[ (\tau \boldsymbol{\Sigma})^{-1} \boldsymbol{\Pi} + P^T \boldsymbol{\Omega}^{-1} Q \right]$$
-
-## Regime Allocation Matrix
-
-Asset allocations shift dynamically based on the current volatility state:
-
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git && cd <your-repo>
+pip install -r requirements.txt
+python regime_bl_portfolio_model.py
 ```
-  ┌────────────────────────────────────────────────────────┐
-  │         Option Surface Feature Engine                  │
-  │     (ATM IV, Term Slope, Downside/Upside Skew)         │
-  └───────────────────────────┬────────────────────────────┘
-                              │
-            ┌─────────────────┴─────────────────┐
-            ▼                                   ▼
-┌──────────────────────────────┐    ┌──────────────────────────────┐
-│  Low Volatility (31% time)   │    │ High/Stress Vol (9% time)    │
-│  - Equity: 50%               │    │ - Equity: 20%                │
-│  - Defensive/Cash: 20%       │    │ - Defensive/Cash: 50%        │
-│  - Gold/Commodities: 20%     │    │ - Gold/Commodities: 30%      │
-└──────────────────────────────┘    └──────────────────────────────┘
+
+**Run on real market data in three lines of Python:**
+
+```python
+from regime_bl_portfolio_model import ASSET_UNIVERSE, AGGRESSIVE, download_yfinance_data, run_backtest
+market = download_yfinance_data(ASSET_UNIVERSE.keys(), start="2008-01-01")
+print(run_backtest(market, AGGRESSIVE, start_backtest="2016-01-01").metrics)
 ```
+
+Swap `AGGRESSIVE` for `LOW_VOL_SAVER` to run the capital-preservation profile.
+
+---
+
+## Architecture
+
+The model is strictly hierarchical. Each layer only consumes the output of the layer above it.
+
+```mermaid
+flowchart TD
+    L1["1. Market Data<br/>prices, VIX / VIX3M, rates"]
+    L2["2. Volatility Surface<br/>S&P 500 implied vol: moneyness x maturity"]
+    L3["3. Regime Engine<br/>R1 - R5 classification, confidence, stress score"]
+    L4["4. Regime-Based Asset Ranking<br/>conditional return, vol, Sortino, max drawdown"]
+    L5["5. Investment Views<br/>relative views e.g. TLT > SPY, with confidence"]
+    L6["6. Black-Litterman<br/>prior + views = posterior expected returns"]
+    L7["7. Portfolio Weights<br/>constrained optimizer, client profile limits"]
+    L8["8. Risk Decomposition<br/>MPT: volatility, beta, contribution to risk"]
+    L9["9. Stress Test and Backtest<br/>regime-conditional performance, drawdowns"]
+
+    L1 --> L2 --> L3 --> L4 --> L5 --> L6 --> L7 --> L8 --> L9
+
+    CP[("Client Profile<br/>prior weights, vol cap, beta cap, return hurdle")]
+    CP -.-> L6
+    CP -.-> L7
+
+    L9 -.->|"feasibility diagnostics"| CP
+
+    classDef data fill:#1f3a5f,stroke:#4a90d9,color:#fff;
+    classDef signal fill:#3b2f5e,stroke:#8e6fd8,color:#fff;
+    classDef alloc fill:#1e4d3a,stroke:#4caf80,color:#fff;
+    classDef eval fill:#5e3a1f,stroke:#d9954a,color:#fff;
+    class L1,L2 data;
+    class L3,L4,L5 signal;
+    class L6,L7 alloc;
+    class L8,L9 eval;
+```
+
+**Design principle:** the regime engine is intentionally *not* an allocator. It only produces relative views. Black-Litterman controls how strongly those views tilt the portfolio away from equilibrium, according to the confidence assigned to each view.
+
+---
+
+## Client Profiles
+
+### 1. Aggressive Investor
+
+| Parameter | Default |
+|---|---|
+| Desired annual return | 14% |
+| Return hurdle (75% of target) | 10.5% |
+| Maximum volatility | 50% of current S&P 500 volatility |
+| Maximum beta | 0.85 |
+| Maximum equity weight | 75% |
+| Minimum defensive allocation | 10% |
+
+### 2. Low Volatility: Beat Savings
+
+| Parameter | Default |
+|---|---|
+| Savings rate hurdle | 3.5% |
+| Minimum return hurdle | 4.5% (savings + 1.0%) |
+| Maximum volatility | 7% |
+| Maximum beta | 0.35 |
+| Maximum equity weight | 45% |
+| Minimum defensive allocation | 45% |
+
+These are starting parameters. When constraints cannot all be met at once, the optimizer reports `RELAXED_BEST_EFFORT` and quantifies the return, volatility and beta violations instead of claiming success. Replace the savings rate with the client's actual hurdle before use.
+
+---
+
+## Customising the Model
+
+Edit the blocks at the top of `regime_bl_portfolio_model.py`:
+
+| Block | Purpose |
+|---|---|
+| `ASSET_UNIVERSE` | Tickers available to the model |
+| `AGGRESSIVE` | Aggressive client profile |
+| `LOW_VOL_SAVER` | Low-volatility client profile |
+| `EQUITY_GROUPS` | Which assets count as equity |
+| `DEFENSIVE_GROUPS` | Which assets count as defensive |
+
+The `prior_weights` inside each profile are the Black-Litterman prior, not the final portfolio.
+
+---
+
+## Data Modes
+
+| Mode | Command | Use |
+|---|---|---|
+| Fast demo | `python regime_bl_portfolio_model.py` | Synthetic data, point-in-time snapshot, pipeline check |
+| Real data | `download_yfinance_data(...)` + `run_backtest(...)` | Historical research via yfinance |
+
+**Implied-volatility surface:** the script has a current option-chain hook and a 3D plot function. Backtesting the full moneyness x maturity surface historically needs point-in-time option chains. Without a professional options dataset, the historical regime backtest uses VIX / VIX3M plus additional stress proxies.
+
+---
+
+## Research Safeguards
+
+- Point-in-time signal construction
+- Next-day implementation after a rebalance signal
+- Rolling covariance estimation
+- Covariance shrinkage when scikit-learn is installed
+- Transaction costs
+- Explicit optimizer feasibility diagnostics
+- Regime-conditional performance analysis
+- Beta, Sharpe, Sortino, maximum drawdown, up/down capture, tracking error, information ratio and tail-loss metrics
+
+---
+
+## Documentation
+
+- [[Math_description]]: full Black-Litterman derivation (reverse optimization, master formula, Idzorek confidence)
+- [[Ideal_Model__BL_]]: model parameters and instrument selection
+- [[Implying_a_Volatility_model]]: volatility regime concept
+- [[regime_bl_demo_results]]: demo output on synthetic data
+- [[Execution_according_to_client_profiles]]: client profile rationale
+
+---
+
+## Disclaimer
+
+For research and education only. Nothing here is financial advice. Past or simulated performance does not predict future results.
+
