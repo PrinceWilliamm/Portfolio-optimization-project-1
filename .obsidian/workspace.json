@@ -25,12 +25,14 @@
             "id": "35f45f3c5d422a9f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Pasted image 20261002151933.png"
+                "file": "README.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20261002151933"
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ],
@@ -174,7 +176,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Pasted image 20261002151933.png",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -206,7 +208,7 @@
             }
           },
           {
-            "id": "c8df912e7ebc10e5",
+            "id": "c0e1b5fbd1027808",
             "type": "leaf",
             "state": {
               "type": "system3-sync-status",
@@ -240,6 +242,8 @@
   },
   "active": "1f6ca8a78bb191fb",
   "lastOpenFiles": [
+    "Requirements",
+    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Pasted image 20261002151933.png",
     "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Pasted image 20261002151853.png",
     "Finance/remote blog 1/README.md",
     "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part/Normalized_ETF_Growth.png",
@@ -264,7 +268,6 @@
     "Finance/General information/Third matrix session (stochastic matrices).md",
     "Finance/General information/1st major stock outlook report, Adidas.md",
     "Finance/General information/Start Here.md",
-    "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part/Pasted image 20261002151933.png",
     "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/Second, more practical part",
     "Finance/remote blog 1/Project 1; The Multi-Asset Portfolio Allocation & Backtesting Model/First part",
     "CSV import/Untitled.md",
