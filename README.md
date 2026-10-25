@@ -148,4 +148,4 @@ The `prior_weights` inside each profile are the Black-Litterman prior, not the f
 ## Disclaimer
 
 For research and education only. Nothing here is financial advice. Past or simulated performance does not predict future results.
-
+© 2026 PrinceWilliamm. All rights reserved.
